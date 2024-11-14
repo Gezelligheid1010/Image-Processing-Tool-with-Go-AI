@@ -104,7 +104,7 @@ func CallStableDiffusionAPI(prompt, initImage string, width, height int, steps i
 
 	// 构建请求数据
 	payload := map[string]interface{}{
-		"key":              "LfUQGT0IQQrjUUgOGDj8Y2L5Jb3tAKYiRbV2Je33mxIRf5G3heCrPNuEEiz8",
+		"key":              "key",
 		"controlnet_type":  "canny",
 		"controlnet_model": "canny",
 		"model_id":         "midjourney",
