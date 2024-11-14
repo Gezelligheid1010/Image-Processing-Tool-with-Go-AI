@@ -43,7 +43,7 @@ func ProcessImage(c *gin.Context) {
 	height, _ := strconv.Atoi(json.Height)
 	steps, _ := strconv.Atoi(json.Steps)
 
-	apiToken := "4LrqBiEgBtJDaTZSbfmk56xRHd1kYR7r"
+	apiToken := "key"
 
 	imageURL, err := services.UploadImageToSMMS(json.InitImage, apiToken)
 	if err != nil {
