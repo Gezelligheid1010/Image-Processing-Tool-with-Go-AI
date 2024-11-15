@@ -1,6 +1,8 @@
 # Image-Processing-Tool-with-Go-AI
 本项目是一个AI图像生成网站，包含后端、前端以及图像生成API三部分，分别使用Golang、Vue.js和Python实现。
+
 教程地址：[https://blog.csdn.net/qq_42638506/category_12833718.html](https://blog.csdn.net/qq_42638506/category_12833718.html)
+
 ## 项目结构
 ```bash
 ├── ImageGenAPI              # 图像生成API代码
