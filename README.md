@@ -1,5 +1,6 @@
 # Image-Processing-Tool-with-Go-AI
 本项目是一个AI图像生成网站，包含后端、前端以及图像生成API三部分，分别使用Golang、Vue.js和Python实现。
+教程地址：[https://blog.csdn.net/qq_42638506/category_12833718.html](https://blog.csdn.net/qq_42638506/category_12833718.html)
 ## 项目结构
 ```bash
 ├── ImageGenAPI              # 图像生成API代码
@@ -76,3 +77,6 @@ npm run serve
 
 1. 图像生成API无法启动：确保安装了uvicorn，并按需检查instruct-pix2pix相关依赖。
 2. 前端无法访问后端或API：检查前端配置文件中的API地址是否正确。
+
+## 相关网址
+
