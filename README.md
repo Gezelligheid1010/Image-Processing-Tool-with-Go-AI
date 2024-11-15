@@ -81,4 +81,4 @@ npm run serve
 2. 前端无法访问后端或API：检查前端配置文件中的API地址是否正确。
 
 ## 相关网址
-
+1. 模型网址：[https://huggingface.co/timbrooks/instruct-pix2pix](https://huggingface.co/timbrooks/instruct-pix2pix)
