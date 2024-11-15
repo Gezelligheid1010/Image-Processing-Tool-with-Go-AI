@@ -4,7 +4,7 @@ name: "MyApp"
 version: "1.0.0"
 start_time: "2024-10-09T10:00:00Z"
 machine_id: 1
-smms_token: "XNcfetni28QIPIzIeWG4g8vgYA0t1hEA"
+smms_token: "token"
 
 log:
   level: "info"
