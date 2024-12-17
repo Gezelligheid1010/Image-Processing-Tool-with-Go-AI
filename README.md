@@ -96,7 +96,7 @@ k6 run --out cloud my_test.js
 2. 前端无法访问后端或API：检查前端配置文件中的API地址是否正确。
 
 ## 更新日志
-== **2024/12/17** ==
+== **2024 年 12 月 17 日** ==
 1. 更新图像上传接口调用的API，`UploadImageToSMMS(base64Image string)` --> `UploadImageToOSS(base64Image string)`，API 实现教程：[稍后更新]()
 2. 添加 **k6** 测试代码文件夹 `api-performance-testing-with-k6`
 3. 更新支持并发版本代码：[稍后更新]()
