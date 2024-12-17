@@ -41,6 +41,7 @@ func SignUpHandler(c *gin.Context) {
 
 	// 4.业务处理 —— 注册用户
 	if err := logic.SignUp(fo); err != nil {
+		//fmt.Println(err)
 		zap.L().Error("logic.signup failed", zap.Error(err))
 		if err.Error() == mysql.ErrorUserExit {
 			ResponseError(c, CodeUserExist)
@@ -75,6 +76,7 @@ func LoginHandler(c *gin.Context) {
 	// 2、业务逻辑处理——登录
 	user, err := logic.Login(u)
 	if err != nil {
+		//fmt.Println(err)
 		zap.L().Error("logic.Login failed", zap.String("username", u.UserName), zap.Error(err))
 		if err.Error() == mysql.ErrorUserNotExit {
 			ResponseError(c, CodeUserNotExist)
