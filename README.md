@@ -99,7 +99,7 @@ k6 run --out cloud my_test.js
 == **2024 年 12 月 17 日** ==
 1. 更新图像上传接口调用的API，`UploadImageToSMMS(base64Image string)` --> `UploadImageToOSS(base64Image string)`，API 实现教程：[稍后更新]()
 2. 添加 **k6** 测试代码文件夹 `api-performance-testing-with-k6`
-3. 更新支持并发版本代码：[稍后更新]()
+3. 更新支持并发版本代码：[https://github.com/Gezelligheid1010/Image-Processing-Tool-with-Go-AI-v2](https://github.com/Gezelligheid1010/Image-Processing-Tool-with-Go-AI-v2)
 
 ## 相关网址
 1. instruct-pix2pix 模型网址：[https://huggingface.co/timbrooks/instruct-pix2pix](https://huggingface.co/timbrooks/instruct-pix2pix)
