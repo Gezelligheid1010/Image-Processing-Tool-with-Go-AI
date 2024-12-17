@@ -44,7 +44,7 @@ def generate_image(request: ImageRequest):
     image = download_image(request.url)
     try:
         # 推理过程
-        images = pipe(prompt=request.prompt, image=image, num_inference_steps=10, image_guidance_scale=1).images
+        images = pipe(prompt=request.prompt, image=image, num_inference_steps=5, image_guidance_scale=1).images
         buffered = BytesIO()
         images[0].save(buffered, format="PNG")
         img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
