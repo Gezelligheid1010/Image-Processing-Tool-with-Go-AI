@@ -5,20 +5,27 @@
 
 ## 项目结构
 ```bash
-├── ImageGenAPI              # 图像生成API代码
-│   └── instruct-pix2pix.py  # 图像生成API主文件
-├── backend                  # 后端代码
-│   ├── main.go              # 后端入口文件
-│   └── ...                  # 其他文件
-├── frontend                 # 前端代码
-│   ├── ...                  # Vue.js项目
-└── README.md                # 项目说明文件
+├── ImageGenAPI                        # 图像生成API代码
+│   └── instruct-pix2pix.py            # 图像生成API主文件
+├── api-performance-testing-with-k6    # 项目测试代码
+│   ├── my-test                        # 测试代码文件夹
+│   │   ├── my_test.js                 # 测试代码主文件
+│   │   ├── utils.js                   # 测试代码需要的工具函数
+│   │   └── ...                        # 其他文件
+│   └── ...                 
+├── backend                            # 后端代码
+│   ├── main.go                        # 后端入口文件
+│   └── ...                  
+├── frontend                           # 前端代码
+│   ├── ...                            # Vue.js项目
+└── README.md                          # 项目说明文件
 ```
 ## 环境依赖
 
 * Python 3.8+ 和 uvicorn
-* Golang 1.18+
+* Golang 1.23.3
 * Node.js 16+ 和 npm 8+
+* k6 0.55.0
 
 ## 启动步骤
 
@@ -49,6 +56,14 @@ npm run serve
 ```
 前端服务将运行在 [http://localhost:8080](http://localhost:8080)。
 
+### 4. 测试代码运行
+
+进入 `api-performance-testing-with-k6/my-test` 文件夹，运行以下命令（`--out cloud` 参数可选）：
+```bash
+k6 run --out cloud my_test.js
+```
+加上 `--out cloud` 参数，测试结果将上传到可视化界面，点击测试完成后出现的链接，即可看到可视化结果。
+
 ## 功能简介
 
 1. **用户注册与登录：** 支持用户注册、登录和Token刷新。
@@ -59,7 +74,7 @@ npm run serve
 
 ### 图像生成API
 
-图像生成API基于instruct-pix2pix实现，用于处理输入图像并生成AI生成的图像。API默认运行在8001端口。
+图像生成API基于 `instruct-pix2pix` 模型和 **FastAPI** 实现，用于处理输入图像并生成AI生成的图像。API默认运行在8001端口。
 
 ### 后端API
 
@@ -80,5 +95,11 @@ npm run serve
 1. 图像生成API无法启动：确保安装了uvicorn，并按需检查instruct-pix2pix相关依赖。
 2. 前端无法访问后端或API：检查前端配置文件中的API地址是否正确。
 
+## 更新日志
+== **2024/12/17** ==
+1. 更新图像上传接口调用的API，`UploadImageToSMMS(base64Image string)` --> `UploadImageToOSS(base64Image string)`，API 实现教程：[稍后更新]()
+2. 添加 **k6** 测试代码文件夹 `api-performance-testing-with-k6`
+3. 更新支持并发版本代码：[稍后更新]()
+
 ## 相关网址
-1. 模型网址：[https://huggingface.co/timbrooks/instruct-pix2pix](https://huggingface.co/timbrooks/instruct-pix2pix)
+1. instruct-pix2pix 模型网址：[https://huggingface.co/timbrooks/instruct-pix2pix](https://huggingface.co/timbrooks/instruct-pix2pix)
