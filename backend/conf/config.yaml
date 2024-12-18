@@ -4,7 +4,7 @@ name: "MyApp"
 version: "1.0.0"
 start_time: "2024-10-09T10:00:00Z"
 machine_id: 1
-smms_token: "token"
+smms_token: ""
 
 log:
   level: "info"
@@ -15,8 +15,8 @@ log:
 
 mysql:
   host: "127.0.0.1"
-  user: "root"
-  password: "root"
+  user: ""
+  password: ""
   dbname: "aidraw"
   port: 3306
   max_open_conns: 20
@@ -29,3 +29,10 @@ redis:
   db: 0
   pool_size: 10
   min_idle_conns: 5
+
+oss:
+  region: "cn-beijing"
+  bucket: "your endpoint name"
+  endpoint: "https://<your endpoint name>.oss-cn-beijing.aliyuncs.com"
+  accessKeyID: ""
+  accessKeySecret: ""
